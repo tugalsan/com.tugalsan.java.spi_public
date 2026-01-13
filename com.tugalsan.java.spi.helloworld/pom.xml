@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent> 
+        <groupId>com.tugalsan.java</groupId>
+        <artifactId>com.tugalsan.java.spi.parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>com.tugalsan.java.spi.helloworld</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>com.tugalsan.java.core.sql.select</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>com.tugalsan.java.core.sql.basic</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>com.tugalsan.java.core.tomcat</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>spi-helloworld</finalName>
+        <plugins>      
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>clean_and_upgrade</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <executable>java</executable>
+                    <commandlineArgs>-jar C:\git\java\trm\com.tugalsan.java.trm.migration.jakarta\target\com.tugalsan.trm.migration.jakarta-1.0.10-SNAPSHOT-shaded.jar C:/git/java/spi/com.tugalsan.java.spi.helloworld/target/war/spi-helloworld.war C:/bin/tomcat/home/webapps/spi-helloworld.war</commandlineArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
