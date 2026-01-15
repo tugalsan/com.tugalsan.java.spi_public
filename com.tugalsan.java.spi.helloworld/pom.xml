@@ -49,7 +49,7 @@
                 </executions>
                 <configuration>
                     <executable>java</executable>
-                    <commandlineArgs>-jar C:\git\com.tugalsan.java.trm_public\com.tugalsan.java.trm.migration.jakarta\target\com.tugalsan.trm.migration.jakarta-1.0.10-SNAPSHOT-shaded.jar C:/git/com.tugalsan.java.spi_public/com.tugalsan.java.spi.helloworld/target/war/spi-helloworld.war C:/bin/tomcat/home/webapps/spi-helloworld.war</commandlineArgs>
+                    <commandlineArgs>-jar C:\git\com.tugalsan.java.trm_public\com.tugalsan.java.trm.migration.jakarta\target\com.tugalsan.java.trm.migration.jakarta-1.0.10-SNAPSHOT-shaded.jar C:/git/com.tugalsan.java.spi_public/com.tugalsan.java.spi.helloworld/target/war/spi-helloworld.war C:/bin/tomcat/home/webapps/spi-helloworld.war</commandlineArgs>
                 </configuration>
             </plugin>
         </plugins>
